@@ -67,7 +67,9 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-sp
 .chapter.swap b{animation:swap .5s var(--ease)}
 @keyframes swap{from{opacity:0;transform:translateY(8px)}}
 .hud-r{justify-self:end;display:flex;align-items:center;gap:18px;font-size:.9rem}
-.hud-r .lnk{color:var(--muted);transition:color .2s}
+.hud-r .lnk{color:var(--muted);transition:color .2s;white-space:nowrap}
+.hud-r .pill{white-space:nowrap}
+@media(max-width:1080px){.hud-r .lnk-cs{display:none}}
 .hud-r .lnk:hover{color:var(--text)}
 .pill{padding:9px 16px;border-radius:999px;background:var(--text);color:var(--bg);font-weight:600;transition:background .2s}
 .pill:hover{background:var(--acc)}
