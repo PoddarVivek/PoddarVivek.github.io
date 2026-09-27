@@ -354,3 +354,20 @@ kbd{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line2);borde
 .reveal.in{opacity:1;transform:none}
 @media(max-width:560px){.wrap{width:min(1200px,100% - 32px)}.cta .btn{flex:1 1 100%}.show .num{font-size:3.4rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.strike:after{transform:scaleX(1)}html{scroll-behavior:auto}}
+
+/* phones: readable minimum type, thumb-sized tap targets, stable viewport height */
+@supports(height:100svh){.detour .sticky,.pin{height:100svh}}
+@media(max-width:560px){
+  html{-webkit-text-size-adjust:100%}
+  body :is(.step .yr,.step .tg,.step p b,.learned b,.show .sector,.tag,.screen .url,.stats span,.xrow .when,.xrow .typ,.ecard .when,.mnav,.scoreboard small,.dlv span,.bcard .meta>*,.brief-form .lbl,.brief-form label,.preview b){font-size:.78rem}
+  .brand{min-height:44px;display:inline-flex;align-items:center}
+  body .mode{min-width:44px;height:44px;justify-content:center}
+  .bcard .links{gap:6px 18px}
+  .bcard .links a{display:inline-flex;align-items:center;min-height:44px}
+  .socials{gap:4px 22px}
+  .socials a{display:inline-flex;align-items:center;min-height:44px}
+  .choice span{height:44px}
+  .mclose{width:44px;height:44px}
+  .mnav button{min-height:44px;padding:8px 16px}
+  body .art{height:400px}
+}
