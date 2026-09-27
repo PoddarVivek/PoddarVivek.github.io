@@ -10,3 +10,7 @@ desktop.ini
 
 # Logs
 *.log
+
+# local-only: assets extracted from the old single-file build
+orig-assets/
+stripped.html

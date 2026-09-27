@@ -1,71 +1,66 @@
 # Vivek Poddar — Portfolio
 
-A single-file, self-contained portfolio website — interactive timeline (life & academic + projects), a "chat with my AI twin" Q&A widget, and a downloadable resume — with no build step and no external dependencies at runtime (all images and the resume PDF are embedded directly in the HTML).
+Live: https://poddar-vivek-github-io.vercel.app/
 
-**Live concept:** electronics engineer → data analyst → product thinker → AI/ML builder, told as a chronological, color-coded timeline (copper = academic, teal = extracurricular, violet = professional/internship).
+A portfolio told as a story in chapters: an electronics engineer who taught himself data, ML, product
+thinking and UI/UX — and shipped live products in edtech, fintech and healthtech.
 
----
+Plain HTML, CSS and vanilla JS. No build step, no npm.
 
-## Tech stack
+## The story
 
-Plain HTML, CSS, and vanilla JavaScript. No React, no npm, no build tools, no bundler. Everything — timeline data, images, the resume PDF — lives inside `index.html`. This means:
+| Chapter | What happens | Technique |
+| --- | --- | --- |
+| Prologue — *The hook* | "In 2022, I was wiring ~~circuits~~. Now I design *products* people use." | Before/after contrast, reading-time promise, "skip to the work" for busy readers |
+| 01 — *The detour* | Why he left pure electronics | Paragraph that lights up word by word as you scroll |
+| 02 — *The learning curve* | One new skill per year, each with its proof | Pinned sideways scroll; cards climb and a lime curve draws itself |
+| Score | 3 live products, 3 industries, 15+ projects… | Count-up numbers |
+| 03 — *The proof* | Maitry Finance, ClinicAI, a coaching institute website | Live previews: hover to scroll through the real page, click to open it |
+| 04 — *The workbench* | Data, ML, product docs, hardware | Filters + clickable toolkit |
+| 05 — *The person* | About, how he learns, experience, education, certificates | Proof thumbnails open in a viewer |
+| 06 — *Face an over* | Interview questions as six deliveries per over | A ball runs down the pitch, the answer arrives as commentary, the scoreboard ticks up; visitors can bowl their own question |
+| 07 — *Yours* | Contact | Brief builder that drafts an email |
 
-- It runs by just opening `index.html` in a browser, or hosting it anywhere that serves static files.
-- There is nothing to `npm install` and nothing to compile.
-- The one tradeoff: the file is a few MB (mostly the embedded images/resume as base64), which is normal and fine for a personal site.
+A fixed header shows the current chapter, a reading-progress bar and the theme switch.
 
-## Running it locally
+**Two themes:** *Floodlights* (default dark: ink, lime, lilac) and *Test whites* (cream flannel, cricket-ball red,
+pitch green). The switch wipes the new theme in as a circle from the button (View Transitions API), remembers the
+choice, and follows the OS light/dark setting on a first visit.
 
-Just double-click `index.html`, or serve it locally to test more accurately (recommended, since some browsers restrict certain features when opened via `file://`):
+## Files
 
-```bash
-# from this folder
-python3 -m http.server 8000
-# then open http://localhost:8000
 ```
-
-## Deploying with GitHub Pages (recommended, free)
-
-1. Create a new GitHub repository (public).
-2. Push these files to the repo's `main` branch:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/PoddarVivek/YOUR-REPO-NAME.git
-   git push -u origin main
-   ```
-3. On GitHub: go to **Settings → Pages**.
-4. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-5. Under **Branch**, choose `main` and folder `/ (root)`, then **Save**.
-6. GitHub will give you a live URL within a minute or two, typically:
-   ```
-   https://poddarvivek.github.io/YOUR-REPO-NAME/
-   ```
-7. Optional: to use `poddarvivek.github.io` as your root domain (no repo name in the URL), name the repo exactly `PoddarVivek.github.io` instead — GitHub treats that repo name specially.
-
-### Custom domain (optional)
-If you own a domain, add a `CNAME` file to the repo root containing just your domain (e.g. `vivekpoddar.dev`), then point your domain's DNS to GitHub Pages per [GitHub's custom domain docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
-
-## Alternative: Vercel / Netlify
-
-Both support "drag and drop a static folder" deployment with zero configuration — just upload this folder through their dashboard, or connect the GitHub repo for automatic redeploys on every push.
-
----
+index.html            page markup
+assets/data.js        ← EDIT ZONE: all content
+assets/site.js        rendering + interactions
+assets/site.css       design system (dark · Instrument Serif · Geist · lime)
+assets/motion.css     motion layer: hero art, aurora, word reveals, 3D screen tilt
+assets/motion.js      smooth scroll (Lenis via CDN), glass product card, theme switch
+assets/over.css       Chapter 06 pitch + scoreboard, theme toggle, Test whites tuning
+assets/img/           photos, certificates and live-site screenshots (live-*.jpg)
+assets/Vivek_Poddar_Resume.pdf
+og-image.png          social share card (source: src/og.html)
+```
 
 ## Editing content
 
-Open `index.html` and search for `EDIT ZONE` — that comment marks the data arrays you'll actually want to touch:
+Everything renders from `assets/data.js`:
 
-- `lifeTimeline` — academic + extracurricular + professional milestones (each with `year`, `category`, `title`, `story`, `skills`, and `proofs`)
-- `projectsTimeline` — project history
-- `qnaPairs` — the prepared Q&A the AI avatar answers instantly
-- `githubGroups` / `skillsData` — the GitHub and Skills sections
+- `CURVE` — the learning-curve steps (oldest → newest)
+- `LIVE` — live products; `img` is a screenshot in `assets/img/`, `tall: true` makes it scroll on hover
+- `BUILDS`, `TOOLKIT` — workbench projects and the clickable toolkit
+- `EXPERIENCE`, `EDUCATION`, `CERTS`, `BEYOND` — `proofs` point at images in `assets/img/`
+- `QNA` — interview answers; every six make one over; `k` is the list of keywords used to match typed questions
 
-Everything renders dynamically from these arrays — you generally won't need to touch the HTML or CSS to update content.
+To refresh a live-site screenshot, capture the site at 1280px wide (tall captures for scrolling previews) and
+overwrite the matching `assets/img/live-*.jpg`.
 
-## Notes
+## Running locally
 
-- The AI chat section answers from a fixed set of prepared Q&A pairs — it's fully static (no API calls), so it works identically everywhere this is hosted.
-- The resume button and all proof images are embedded as base64 data — swap them by re-running the same embedding approach (base64-encode the file, replace the relevant `src`/`href`), or ask for help regenerating them from updated source files.
+```bash
+python -m http.server 8000
+```
+
+## Deploying
+
+The repo is connected to Vercel — pushing to `main` redeploys automatically.
