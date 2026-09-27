@@ -24,8 +24,8 @@ const CURVE = [
    proof:'PRDs and case studies — like the HyperScan digital KYC flow.'},
   {year:'2026', tag:'Design', learned:'UI/UX & product design',
    proof:'Three live products — in edtech, fintech and healthtech.'},
-  {year:'Now', tag:'Startup', learned:'Building next to a founder',
-   proof:'Founders Office at Butter Search — website building and product management.'},
+  {year:'Now', tag:'Business', learned:'Client relationships, backed by data',
+   proof:'Founders Office at Butter Search — finding new clients through market research and building long-term relationships with them.'},
 ];
 
 /* ---------- Chapter 3 · The proof — live products ----------
@@ -95,7 +95,7 @@ const TOOLKIT = ['UI Design','UX Research','Design Systems','Prototyping','PRD W
 /* ---------- Chapter 5 · The person ---------- */
 const EXPERIENCE = [
   {when:'Jul 2026 – now', type:'Full-time', title:'Founders Office', org:'Butter Search · Kolkata (remote)',
-   detail:'Working directly with the founder on website building and product management.',
+   detail:'Business relations for an executive search firm. I map VC-backed startups by funding stage, sector and likely leadership gaps, rank them by fit, and turn the strongest prospects into long-term client relationships.',
    proofs:[]},
   {when:'Aug 2026 – now', type:'Freelance', title:'Freelance Web Developer', org:'Maitry Finance Limited · remote',
    detail:'Built the company’s official website from scratch — responsive UI with interactive loan and EMI features, from design to deployment.',
@@ -159,7 +159,7 @@ const QNA = [
   {q:'What would you build next?', k:['next','build next','future project','idea'],
    a:"Something that takes a phone call or a paper register out of someone's day. ClinicAI does that for clinics; there are plenty of industries still running on missed calls."},
   {q:'What are you doing right now?', k:['now','current','currently','job','working'],
-   a:"I'm in the Founders Office at Butter Search, working on website building and product management, and freelancing on Maitry Finance's website."},
+   a:"I'm in the Founders Office at Butter Search, an executive search firm, working on business relations. I research which VC-backed startups are likely to need senior hires, prioritise them by stage and fit, open the conversation, and build relationships meant to last beyond a single mandate. I'm also freelancing on Maitry Finance's website."},
   {q:'A time you showed leadership', k:['leader','lead','team','manage','committee'],
    a:"As Logistics Lead for Confluence I coordinated 10–15 vendors, artist schedules and stage operations for marquee events — lots of moving parts, one deadline. I've also been Committee Head twice in a year, for MUN and Confluence 2025."},
   {q:'A challenge or failure', k:['challenge','failure','fail','mistake','difficult','hard'],
