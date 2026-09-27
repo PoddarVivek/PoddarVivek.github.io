@@ -32,7 +32,7 @@ const CURVE = [
    img: screenshot in assets/img; tall:true means it scrolls on hover */
 const LIVE = [
   {id:'maitry', name:'Maitry Finance', sector:'Fintech · RBI-registered NBFC', year:'2026',
-   url:'https://maitry-finance-website.vercel.app/', img:'assets/img/live-maitry.jpg', tall:true,
+   url:'https://maitry-finance-website.vercel.app/', img:'assets/img/live-maitry.jpg', tall:true, cs:'case-studies/maitry-finance.html',
    brief:'A lender needed a website that makes borrowing feel simple — while meeting every RBI disclosure rule.',
    learned:'How digital lending is regulated: Key Facts Statements, cooling-off windows, grievance redressal and the RBI Ombudsman.',
    shipped:['Plain-language voice — "Borrowing, minus the jargon"','An EMI calculator with real numbers upfront','Loan lineup, rates & terms and a two-tier grievance flow mapped to RBI requirements','An enquiry form routed straight to the support inbox'],
@@ -46,7 +46,7 @@ const LIVE = [
    tags:['Next.js','Supabase','Product strategy','Dashboard design']},
 
   {id:'rinkal', name:'Coaching Institute Website', sector:'Edtech · real client', year:'2026',
-   url:'https://rinkal-coaching.vercel.app/', img:'assets/img/live-rinkal.jpg', tall:true,
+   url:'https://rinkal-coaching.vercel.app/', img:'assets/img/live-rinkal.jpg', tall:true, cs:'case-studies/rinkal-coaching.html',
    brief:'A home tutor for Classes 8–10 needed parents to get in touch. Enquiry forms weren\'t getting filled.',
    learned:'How parents actually pick a tutor — and that they\'d rather send a WhatsApp than fill in a form.',
    shipped:['A WhatsApp enquiry builder: tap class, board and subjects → a ready-to-send message','A 60-second subject quiz and 30-second lessons, so students come back','A mobile-first design system built around a notebook metaphor'],

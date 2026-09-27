@@ -69,7 +69,8 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-sp
 .hud-r{justify-self:end;display:flex;align-items:center;gap:18px;font-size:.9rem}
 .hud-r .lnk{color:var(--muted);transition:color .2s;white-space:nowrap}
 .hud-r .pill{white-space:nowrap}
-@media(max-width:1080px){.hud-r .lnk-cs{display:none}}
+.hud-r .lnk-cs{color:var(--text)}
+@media(max-width:1080px){.hud-r .lnk[data-resume]{display:none}}
 .hud-r .lnk:hover{color:var(--text)}
 .pill{padding:9px 16px;border-radius:999px;background:var(--text);color:var(--bg);font-weight:600;transition:background .2s}
 .pill:hover{background:var(--acc)}
@@ -172,7 +173,8 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-sp
 .shipped li:before{content:"→";color:var(--acc)}
 .show .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
 .tag{font-family:var(--mono);font-size:.72rem;padding:3px 10px;border:1px solid var(--line2);border-radius:999px;color:var(--muted)}
-.show .go{margin-top:26px}
+.show .go{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.proof .cs-all{margin-top:22px}
 .screen{position:relative;display:block;border-radius:16px;background:var(--card2);border:1px solid var(--line2);box-shadow:0 40px 90px -30px rgba(var(--shade-rgb),.8),0 0 0 1px rgba(var(--shade-rgb),.4);transition:transform .5s var(--ease),box-shadow .5s}
 @media(hover:hover){.screen{cursor:none}}
 .screen:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 50px 100px -30px rgba(var(--shade-rgb),.9),0 0 0 1px var(--acc)}

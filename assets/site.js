@@ -84,7 +84,10 @@ $('#shows').innerHTML = LIVE.map((l, i) => `
       <div class="learned"><b>What I had to learn first</b><p>${esc(l.learned)}</p></div>
       <ul class="shipped">${l.shipped.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
       <div class="tags">${l.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-      <a class="btn ghost go" href="${esc(l.url)}" target="_blank" rel="noopener">Open ${esc(host(l.url))} ↗</a>
+      <div class="go">
+        ${l.cs ? `<a class="btn primary" href="${esc(l.cs)}">Read the case study →</a>` : ''}
+        <a class="btn ghost" href="${esc(l.url)}" target="_blank" rel="noopener">Open ${esc(host(l.url))} ↗</a>
+      </div>
       ${l.note ? `<span class="note">${esc(l.note)}</span>` : ''}
     </div>
     <div class="sw"><a class="screen${l.tall ? ' tall' : ''}" href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(l.name)} live site">
@@ -433,6 +436,7 @@ document.addEventListener('keydown', e => {
   const k = e.key.toLowerCase();
   if (k === 'r') $('.hud [data-resume]').click();
   if (k === 'w') goTo($('#proof'));
+  if (k === 'c') location.href = 'case-studies/';
 });
 
 observe();
