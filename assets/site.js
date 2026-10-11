@@ -86,12 +86,12 @@ $('#shows').innerHTML = LIVE.map((l, i) => `
       <div class="tags">${l.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
       <div class="go">
         ${l.cs ? `<a class="btn primary" href="${esc(l.cs)}">Read the case study →</a>` : ''}
-        <a class="btn ghost" href="${esc(l.url)}" target="_blank" rel="noopener">Open ${esc(host(l.url))} ↗</a>
+        <a class="btn ghost" href="${esc(l.url)}" target="_blank" rel="noopener">Open ${esc(l.label || host(l.url))} ↗</a>
       </div>
       ${l.note ? `<span class="note">${esc(l.note)}</span>` : ''}
     </div>
     <div class="sw"><a class="screen${l.tall ? ' tall' : ''}" href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(l.name)} live site">
-      <span class="chrome"><i></i><i></i><i></i><span class="url"><em>live</em>${esc(host(l.url))}</span></span>
+      <span class="chrome"><i></i><i></i><i></i><span class="url"><em>live</em>${esc(l.label || host(l.url))}</span></span>
       <span class="viewport"><img src="${esc(l.img)}" alt="Screenshot of ${esc(l.name)}" loading="lazy"></span>
     </a></div>
   </article>`).join('');

@@ -39,7 +39,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.035em}
 .status i:after{display:none}
 
 /* Spotted joins the hero art: a friend's sticker notification */
-.g-chip.c4{left:-26%;top:7%;transform:translateZ(110px);animation:float 8.5s ease-in-out -3s infinite}
+.g-chip.c4{left:-4%;top:4%;transform:translateZ(110px);animation:float 8.5s ease-in-out -3s infinite}
 .g-chip .sav{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ff5200;color:#fff;font:700 .6rem/1 var(--sans);font-style:normal;flex:none}
 @media(max-width:900px){.g-chip.c4{left:-2%;bottom:auto;top:62%}}
 @media(prefers-reduced-motion:reduce){.g-chip.c4{animation:none}}

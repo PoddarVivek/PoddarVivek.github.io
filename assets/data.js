@@ -32,7 +32,7 @@ const CURVE = [
    img: screenshot in assets/img; tall:true means it scrolls on hover */
 const LIVE = [
   {id:'spotted', name:'Spotted · Swiggy concept', sector:'Consumer · food delivery', year:'2026',
-   url:'https://poddar-vivek-github-io.vercel.app/spotted/', img:'assets/img/live-spotted.jpg', tall:true, cs:'case-studies/spotted.html',
+   url:'https://poddar-vivek-github-io.vercel.app/spotted/', label:'Spotted prototype', img:'assets/img/live-spotted.jpg', tall:true, cs:'case-studies/spotted.html',
    brief:'Ordering in is social, but it happens alone. A new Swiggy tab where friends see each other\'s orders live, roast them and order the same.',
    learned:'Why people open some notifications and ignore others, and what the research says about guiding someone through a new feature without a tutorial.',
    shipped:['Two linked phones: a sticker sent on one lands on the other','A 4-tap guided try-out with one hint at a time, built for phones first','Friends-only food photos as story rings on restaurants, instead of star reviews','An evidence-backed impact table and a 4-week experiment plan','A 37-second vertical demo video for LinkedIn'],

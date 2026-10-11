@@ -37,6 +37,8 @@ assets/site.css       design system (dark · Instrument Serif · Geist · lime)
 assets/motion.css     motion layer: hero art, aurora, word reveals, 3D screen tilt
 assets/motion.js      smooth scroll (Lenis via CDN), glass product card, theme switch
 assets/over.css       Chapter 06 pitch + scoreboard, theme toggle, Test whites tuning
+assets/case-study.css case studies: portfolio header, fonts and both themes over each page's own styles
+assets/case-study.js  case-study theme switch (shares the saved theme with the main page)
 assets/img/           photos, certificates and live-site screenshots (live-*.jpg)
 assets/Vivek_Poddar_Resume.pdf
 og-image.png          social share card (source: src/og.html)
@@ -47,7 +49,7 @@ og-image.png          social share card (source: src/og.html)
 Everything renders from `assets/data.js`:
 
 - `CURVE` — the learning-curve steps (oldest → newest)
-- `LIVE` — live products; `img` is a screenshot in `assets/img/`, `tall: true` makes it scroll on hover
+- `LIVE` — live products; `img` is a screenshot in `assets/img/`, `tall: true` makes it scroll on hover, `label` replaces the domain shown on the card
 - `BUILDS`, `TOOLKIT` — workbench projects and the clickable toolkit
 - `EXPERIENCE`, `EDUCATION`, `CERTS`, `BEYOND` — `proofs` point at images in `assets/img/`
 - `QNA` — interview answers; every six make one over; `k` is the list of keywords used to match typed questions
