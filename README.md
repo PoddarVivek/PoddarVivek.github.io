@@ -2,8 +2,11 @@
 
 Live: https://poddar-vivek-github-io.vercel.app/
 
-A portfolio aimed at Founder's Office, product management and product / UI-UX design roles. The pitch:
-he works out what's worth building, then designs and ships it.
+A portfolio aimed at Founder's Office, product management, product / UI-UX design and data or business
+analyst roles. The pitch: he works out what's worth building, then designs and ships it, and uses AI
+(Claude, ChatGPT, n8n) to automate the busywork.
+
+Keep employer data off the site: no Butter Search numbers, client names or internal links.
 
 Plain HTML and CSS, with a few lines of JS. No build step, no npm.
 
@@ -20,9 +23,11 @@ can be copied.
 
 | Section | What's in it |
 | --- | --- |
-| Intro | The pitch, a short bio, the roles he's open to and where |
+| Intro | The pitch, a short bio, the roles he's open to and where, and four proof points (NIT Kurukshetra, Founder's Office, 4 live products, AI-native) |
+| Founder's Office | How he runs the outreach funnel at Butter Search and what he changed, described without numbers |
 | Selected work | Four projects, each a colour panel with real desktop and phone screenshots, the problem, what he did, and links to the case study and live site |
-| Smaller projects | Product teardowns, a PRD and two data projects, each with a link |
+| Product and data projects | Product teardowns, a PRD and data/BI projects, each with a link |
+| How I use AI | Three real examples: the n8n + Claude WhatsApp pipeline, Claude skills for routine work, AI as build partner |
 | Experience | Butter Search, freelance design, Grrowup, leadership |
 | About | Short story, toolkit, education |
 | Contact | Email with a copy button, LinkedIn, GitHub, résumé |
