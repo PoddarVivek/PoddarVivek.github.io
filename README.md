@@ -15,7 +15,7 @@ Plain HTML, CSS and vanilla JS. No build step, no npm.
 | 01 — *The detour* | Why he left pure electronics | Paragraph that lights up word by word as you scroll |
 | 02 — *The learning curve* | One new skill per year, each with its proof | Pinned sideways scroll; cards climb and a lime curve draws itself |
 | Score | 3 live products, 3 industries, 15+ projects… | Count-up numbers |
-| 03 — *The proof* | Maitry Finance, ClinicAI, a coaching institute website | Live previews: hover to scroll through the real page, click to open it |
+| 03 — *The proof* | Spotted (a Swiggy feature concept), Maitry Finance, ClinicAI, a coaching institute website | Live previews: hover to scroll through the real page, click to open it |
 | 04 — *The workbench* | Data, ML, product docs, hardware | Filters + clickable toolkit |
 | 05 — *The person* | About, how he learns, experience, education, certificates | Proof thumbnails open in a viewer |
 | 06 — *Face an over* | Interview questions as six deliveries per over | A ball runs down the pitch, the answer arrives as commentary, the scoreboard ticks up; visitors can bowl their own question |

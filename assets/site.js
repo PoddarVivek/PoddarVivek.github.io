@@ -361,7 +361,7 @@ function afterBall(){
   $('#cmTag').textContent += ' · over complete';
   $('#cmA').insertAdjacentHTML('beforeend', `<span class="over-end">${more
     ? `That's the over. <button type="button" class="lnk-btn" id="nextOver">Bowl another →</button> or <a href="#next">let's talk</a>.`
-    : `That's the innings. <a href="#next">Let's talk</a> — I'd rather answer the rest in person.`}</span>`);
+    : `That's the innings. <a href="#next">Let's talk</a>. I'd rather answer the rest in person.`}</span>`);
   const nb = $('#nextOver');
   if (nb) nb.onclick = () => { over.n++; over.faced = []; renderOver(); $('#cmTag').textContent = `Over ${over.n + 1}`; $('#cmQ').textContent = 'New over. Pick a delivery.'; $('#cmA').textContent = ''; };
 }
@@ -388,7 +388,7 @@ $('#askForm').addEventListener('submit', e => {
   inp.value = '';
   const p = answerFor(q);
   if (p) bowl('Your ball', q, esc(p.a), 6);
-  else bowl('Your ball', q, `Good ball — that one deserves a real conversation, not a prepared answer. <a href="#next">Send it to me</a> and I'll play it properly.`, 0);
+  else bowl('Your ball', q, `Good ball. That one deserves a real conversation, not a prepared answer. <a href="#next">Send it to me</a> and I'll play it properly.`, 0);
 });
 renderOver();
 
@@ -408,7 +408,7 @@ function subject(){
   const about = (bf.querySelector('input[name=about]:checked') || {}).value;
   const co = $('#bCompany').value.trim();
   const what = about && about !== 'something else' ? about[0].toUpperCase() + about.slice(1) : 'Hello';
-  return `${what}${co ? ' — ' + co : ''} (via your portfolio)`;
+  return `${what}${co ? ', ' + co : ''} (via your portfolio)`;
 }
 function renderBrief(){ $('#bPreview').innerHTML = '<b>Your email</b>' + esc(buildBrief()); }
 bf.addEventListener('input', renderBrief); renderBrief();
@@ -419,11 +419,11 @@ bf.addEventListener('submit', e => {
 });
 $('#bCopy').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(`To: ${CONFIG.email}\nSubject: ${subject()}\n\n${buildBrief()}`); toast('Copied'); }
-  catch { toast('Copy failed — select the preview text instead'); }
+  catch { toast('Copy failed. Select the preview text instead'); }
 });
 
 /* ---------- résumé + keyboard shortcuts ---------- */
-document.addEventListener('click', e => { if (e.target.closest('[data-resume]')) toast('Résumé downloading — thanks for reading'); });
+document.addEventListener('click', e => { if (e.target.closest('[data-resume]')) toast('Résumé downloading. Thanks for reading'); });
 document.addEventListener('keydown', e => {
   const open = $('#modal').classList.contains('open');
   if (open){
