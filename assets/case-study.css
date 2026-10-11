@@ -1,71 +1,53 @@
 /* ============================================================
-   Case studies — same look as the portfolio.
-   Loaded after each page's own <style>: swaps the paper/navy palette
-   for the portfolio's two themes (Floodlights · Test whites),
-   its fonts, and its header.
+   Case studies: same look as the portfolio.
+   Loaded after each page's own <style>; points its tokens at the
+   portfolio's paper, ink and cobalt, and its two typefaces.
    ============================================================ */
 :root{
-  --bg:#0c0c0e;--card:#16161a;--card2:#1c1c21;
-  --text:#f2efe8;--muted:#a09d95;--line2:rgba(255,255,255,.16);
-  --acc:#d4ff3a;--acc-ink:#0c0c0e;--acc-soft:rgba(212,255,58,.2);--go-soft:rgba(255,82,0,.16);
-  --sans:'Bricolage Grotesque',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
-  /* the page's own tokens, pointed at the portfolio's */
-  --paper:var(--bg);--ink:var(--text);--rule:var(--line2);--hl:var(--acc);--note:var(--acc);
-  color-scheme:dark;
+  --paper:#f3f0e8;--ink:#15140f;--muted:#5f5b50;--rule:rgba(21,20,15,.14);--card:#faf8f3;
+  --acc:#2a37f0;--hl:rgba(42,55,240,.14);--note:var(--acc);
+  --sans:'Schibsted Grotesk',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;
 }
-html[data-theme="whites"]{
-  --bg:#f3eee3;--card:#fbf8f1;--card2:#f2ecdf;
-  --text:#1c1912;--muted:#6b6457;--line2:rgba(46,36,20,.18);
-  --acc:#b3122b;--acc-ink:#fff8ee;--acc-soft:rgba(179,18,43,.14);--go-soft:rgba(255,82,0,.12);
-  color-scheme:light;
-}
-
-body{font-family:var(--sans);font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-weight:600;letter-spacing:-.035em}
+body{font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--sans);font-weight:700;letter-spacing:-.035em}
+h1{letter-spacing:-.045em}
 a{text-decoration-color:var(--acc)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 
 /* header, matching the portfolio's */
-.top{align-items:center;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line2)}
-.top .brand{display:inline-flex;align-items:center;gap:10px;font-weight:600}
-.top .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--acc)}
-.top .links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-weight:500}
-.top .links a{color:var(--text)}
-.top .links a:hover{color:var(--acc)}
-.top .mode{font:500 13px/1 var(--mono);color:var(--muted);background:none;border:1px solid var(--line2);border-radius:999px;padding:8px 12px;cursor:pointer}
-.top .mode:hover{color:var(--text);border-color:var(--text)}
-.top .pill{background:var(--text);color:var(--bg)!important;padding:9px 16px;border-radius:999px}
-.top .pill:hover{background:var(--acc);color:var(--acc-ink)!important}
-@media (max-width:560px){
-  .top{flex-wrap:nowrap;gap:10px;font-size:14px}
-  .top .links{gap:12px;flex-wrap:nowrap}
-  .top .links .hide-sm{display:none}
-  .top .pill{padding:8px 12px}
-}
+.top{align-items:center;padding-bottom:18px;border-bottom:1px solid var(--rule);font-family:var(--sans)}
+.top .brand{font-weight:700}
+.top .links{display:flex;align-items:center;gap:24px;font-weight:500}
+.top .links a:hover{text-decoration:underline;text-underline-offset:5px}
+.top .pill{background:var(--ink);color:var(--paper)!important;padding:9px 16px;border-radius:3px}
+.top .pill:hover{background:var(--acc);text-decoration:none!important}
+@media (max-width:560px){.top{gap:12px;font-size:15px}.top .links{gap:14px}.top .links .hide-sm{display:none}.top .pill{padding:8px 12px}}
 
-/* mono for labels, like the portfolio's eyebrows */
-.tag,.facts dt,.bar,th{font-family:var(--mono)!important;letter-spacing:.04em;font-weight:500}
+/* labels */
+.tag,.facts dt,.bar,th{font-family:var(--sans)!important;font-size:13px!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase}
 .tag{color:var(--acc)}
+.facts{border-top:1px solid var(--ink)}
+footer{border-top:1px solid var(--ink)}
 
-/* flat surfaces: thin rules instead of ink outlines and offset shadows */
-.facts,footer{border-top:1px solid var(--line2)}
-.shot,.item,.vid,.ba div,table{border:1px solid var(--line2);box-shadow:none!important}
-.bar{border-bottom:1px solid var(--line2)}
+/* flat surfaces, square-ish corners */
+.shot,.item,.vid,.ba div,table{border:1px solid var(--rule);box-shadow:none!important;border-radius:4px}
+.vid{border-radius:24px;border:5px solid #0d0d0d}
+.bar{border-bottom:1px solid var(--rule)}
 .bar i{border-color:var(--muted)}
 .item{transition:border-color .2s}
-.item:hover{transform:none;border-color:var(--acc)}
-.shot img,.item img{background:var(--card2);border-color:var(--line2)}
+.item:hover{transform:none;border-color:var(--ink)}
+.shot img,.item img{background:#ebe6da;border-radius:2px}
 
-/* design-decision notes: the portfolio's serif italic, no stripe, no tilt */
-.why{font:italic 400 26px/1.2 var(--serif);color:var(--acc);transform:none;border-left:0;padding-left:0}
-.why mark{background:var(--acc-soft);color:inherit;padding:0 .1em}
+/* design-decision notes: serif italic in cobalt, no stripe, no tilt */
+.why{font:italic 400 24px/1.25 var(--serif);color:var(--acc);transform:none;border-left:0;padding-left:0}
+.why mark{background:var(--hl);color:inherit;padding:0 .1em}
 
 /* buttons */
-.cta{border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink)}
-.cta.o{background:transparent;color:var(--text);border-color:var(--line2)}
-.cta:hover,.cta.o:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+.cta{border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:3px;font-family:var(--sans)}
+.cta.o{background:transparent;color:var(--ink)}
+.cta:hover,.cta.o:hover{background:var(--acc);border-color:var(--acc);color:#fff}
 
-/* Spotted keeps Swiggy orange for its own UI; tints follow the theme */
-.ba .yes,tr.hi td{background:var(--go-soft)}
-th{background:var(--card2)}
+/* Spotted keeps Swiggy orange for its own UI */
+.ba .yes,tr.hi td{background:#ffe9dd}
+th{background:#ebe6da}
 .hero li::before{font-family:var(--sans)}

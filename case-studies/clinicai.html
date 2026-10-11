@@ -1,9 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ClinicAI · case study · Vivek Poddar</title><meta name="description" content="Designing an AI receptionist for independent clinics in India: the doctor stays in control, the phone always gets answered.">
-<script>try{var t=localStorage.getItem('theme');if(!t&&matchMedia('(prefers-color-scheme: light)').matches)t='whites';if(t==='whites')document.documentElement.dataset.theme='whites'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#FAFAF7;--ink:#1E2A44;--muted:#5B6478;--hl:#FFE066;--note:#B83A1E;--rule:#DADDE4;--card:#FFFFFF}
 *{box-sizing:border-box}
@@ -68,10 +67,10 @@ footer{border-top:2px solid var(--ink);padding-top:20px;font-size:15px;color:var
 .metrics li{margin-bottom:6px}
 @media (max-width:760px){.who div{grid-template-columns:1fr;row-gap:6px}.who h3,.who small,.who p:nth-of-type(n){grid-column:1;grid-row:auto}}
 </style>
-<link rel="stylesheet" href="../assets/case-study.css?v=20261012b"></head><body><div class="wrap">
-<nav class="top" aria-label="Site"><a class="brand" href="../"><span class="dot"></span>Vivek Poddar</a><span class="links"><a class="hide-sm" href="../">← Portfolio</a><a href="./">Case studies</a><a class="hide-sm" href="../assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf">Résumé ↓</a><button class="mode hide-sm" id="modeBtn" type="button" aria-label="Switch theme">Floodlights</button><a class="pill" href="../#contact">Let's talk</a></span></nav>
+<link rel="stylesheet" href="../assets/case-study.css?v=20261011m"></head><body><div class="wrap">
+<nav class="top" aria-label="Site"><a class="brand" href="../">Vivek Poddar</a><span class="links"><a href="../#work">Work</a><a class="hide-sm" href="./">Case studies</a><a class="hide-sm" href="../assets/Vivek_Poddar_Resume.pdf" target="_blank" rel="noopener">Résumé</a><a class="pill" href="../#contact">Get in touch</a></span></nav>
 <header><span class="tag">Personal SaaS product · healthtech</span><h1>Answering every call a clinic misses</h1><p class="lede">Independent clinics in India lose patients when the phone rings during a consultation. ClinicAI is an AI receptionist that answers in English, Hindi and Bengali, books into the clinic's real schedule and passes the doctor only the calls that need a decision.</p><dl class="facts"><div><dt>Role</dt><dd>Solo: product, design and build</dd></div><div><dt>Type</dt><dd>Personal project, in early access</dd></div><div><dt>Built with</dt><dd>Next.js, Supabase</dd></div><div><dt>Scope</dt><dd>Landing page, onboarding, clinic workspace, patient portal</dd></div></dl></header>
-<figure class="shot"><div class="bar"><i></i><i></i><i></i><span>clinic-ai-pi.vercel.app</span></div><img src="../assets/img/live-clinic.jpg" alt="ClinicAI landing page" loading="lazy" style="object-position:top"></figure>
+<figure class="shot"><div class="bar"><i></i><i></i><i></i><span>clinic-ai-pi.vercel.app</span></div><img src="../assets/work/clinic-desktop.jpg" alt="ClinicAI landing page" loading="lazy" style="object-position:top"></figure>
 
 <section><h2>The problem</h2><div class="prose"><p>A doctor running a small clinic is usually the busiest person in it. When they're with a patient, the phone rings out, and the patient on the other end simply calls the next clinic. Front-desk staff, where there are any, spend the day firefighting bookings instead of looking after the people in the waiting room.</p><p>Patients want something simple: a time confirmed in one call, in their own language, and a way to change it later without calling again.</p><p>The hard part isn't answering the phone. It's letting software take bookings without the doctor feeling they've lost control of their own schedule.</p></div></section>
 
@@ -93,7 +92,6 @@ footer{border-top:2px solid var(--ink);padding-top:20px;font-size:15px;color:var
 <section><h2>How I'd measure it</h2><div class="prose"><p><b>North Star:</b> appointments booked by the AI per clinic per week. It counts both time given back to the clinic and patients kept.</p><p><b>Activation:</b> a new clinic sees a test call book a slot into its own schedule.</p><p>Supporting metrics, each tracked as a product event:</p><ul class="metrics"><li>Sign-up → setup finished → phone line connected</li><li>Days per week the workspace is opened</li><li>Time taken to decide a request</li><li>AI call completion rate: calls that end booked or with an alternative offered</li><li>Changes patients make in the portal instead of calling</li></ul><p>ClinicAI is in early access, so there are no customer numbers yet. These are the numbers I'd watch first.</p></div></section>
 
 <section><h2>What's next</h2><div class="prose"><p>SMS or WhatsApp confirmations with a link to the patient portal, one-tap approve notifications for the doctor, staff invites with owner and staff roles, and a weekly summary email built from the same data as the Today view. Pricing still needs to be set before early access ends.</p></div><a class="cta" href="https://clinic-ai-pi.vercel.app/">Open ClinicAI</a></section>
-<footer><span>Vivek Poddar · product &amp; UX design</span>
+<footer><span>Vivek Poddar · Founder's Office, product and design</span>
 <span><a href="https://www.linkedin.com/in/vivekpoddar-work">LinkedIn</a> &nbsp; <a href="https://github.com/PoddarVivek">GitHub</a> &nbsp; <a href="mailto:vivekpoddar.work@gmail.com">Email</a></span></footer>
-</div><script src="../assets/case-study.js?v=20261012b"></script>
-</body></html>
+</div></body></html>
