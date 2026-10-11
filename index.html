@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vivek Poddar · I learn fast and ship what I learn</title>
-<meta name="description" content="Vivek Poddar, electronics engineer turned product designer. Live products in edtech, fintech and healthtech, and a Swiggy feature concept, told as a short story in seven chapters.">
+<title>Vivek Poddar · Product & UI/UX designer</title>
+<meta name="description" content="Vivek Poddar, product and UI/UX designer from NIT Kurukshetra. Four live products across fintech, healthtech, edtech and food delivery, with case studies for each.">
 <meta name="theme-color" content="#0c0c0e">
-<meta property="og:title" content="Vivek Poddar: from circuits to products">
-<meta property="og:description" content="An electronics engineer who taught himself data, ML, product and UI/UX, and shipped live products in three industries.">
+<meta property="og:title" content="Vivek Poddar · Product & UI/UX designer">
+<meta property="og:description" content="Four live products across fintech, healthtech, edtech and food delivery, from research and wireframes to the shipped build.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://poddar-vivek-github-io.vercel.app/">
 <meta property="og:image" content="https://poddar-vivek-github-io.vercel.app/og-image.png">
@@ -20,272 +20,163 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
-<link rel="stylesheet" href="assets/site.css?v=20261012b">
-<link rel="stylesheet" href="assets/motion.css?v=20261012b">
-<link rel="stylesheet" href="assets/over.css?v=20261012b">
-<link rel="stylesheet" href="assets/sharpen.css?v=20261012b">
+<link rel="stylesheet" href="assets/site.css?v=20261012d">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Vivek Poddar",
-  "jobTitle": "Product designer & builder",
+  "jobTitle": "Product & UI/UX designer",
   "url": "https://poddar-vivek-github-io.vercel.app/",
   "image": "https://poddar-vivek-github-io.vercel.app/assets/img/vivek.jpg",
   "email": "mailto:vivekpoddar.work@gmail.com",
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "National Institute of Technology, Kurukshetra"},
   "address": {"@type": "PostalAddress", "addressLocality": "Kolkata", "addressCountry": "IN"},
-  "knowsAbout": ["Product design", "UI/UX", "Next.js", "Python", "SQL", "Machine learning"],
+  "knowsAbout": ["Product design", "UI/UX", "Figma", "Prototyping", "Next.js", "SQL", "Python"],
   "sameAs": ["https://www.linkedin.com/in/vivekpoddar-work", "https://github.com/PoddarVivek"]
 }
 </script>
 </head>
 <body>
-<a class="skip" href="#proof">Skip to the work</a>
+<a class="skip" href="#work">Skip to the work</a>
 
-<!-- ========== HUD: brand · chapter · progress ========== -->
-<header class="hud">
-  <a class="brand" href="#top" aria-label="Vivek Poddar, back to top"><span class="dot"></span>Vivek Poddar</a>
-  <div class="chapter" aria-live="polite"><span id="chNum">Prologue</span><b id="chName">The hook</b></div>
-  <nav class="hud-r">
-    <button class="mode" id="modeBtn" type="button" aria-label="Switch theme"><span class="mode-ico" aria-hidden="true"></span><span class="mode-txt" id="modeTxt">Floodlights</span></button>
-    <a class="lnk lnk-cs" href="case-studies/">Case studies</a>
-    <a class="lnk" href="assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf" data-resume>Résumé ↓</a>
-    <a class="pill" href="#next">Let's talk</a>
-  </nav>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Vivek Poddar, back to top"><span class="dot"></span>Vivek Poddar</a>
+    <nav class="sections" aria-label="Sections">
+      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="case-studies/">Case studies</a>
+    </nav>
+    <div class="actions">
+      <button class="mode" id="modeBtn" type="button" aria-label="Switch theme"><span class="mode-ico" aria-hidden="true"></span><span class="mode-txt" id="modeTxt">Floodlights</span></button>
+      <a class="lnk hide-sm" href="assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf">Résumé ↓</a>
+      <a class="pill" href="#contact">Contact</a>
+    </div>
+  </div>
   <i class="bar" id="progress"></i>
 </header>
 
 <main id="top">
 
-<!-- ========== PROLOGUE ========== -->
-<section class="prologue" data-ch="Prologue" data-name="The hook" id="prologue">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="glow" aria-hidden="true"></div>
+<!-- ========== HERO ========== -->
+<section class="hero">
   <div class="wrap hero-grid">
-   <div class="hero-copy">
-    <div class="pro-top">
-      <span class="status"><i></i>Open to opportunities</span>
-      <span class="mono">NIT Kurukshetra '26 · Kolkata</span>
-    </div>
-    <h1 class="hook">
-      <span class="l1">In 2022, I was wiring <span class="strike">circuits.</span></span>
-      <span class="l2">Now I design <em>products</em> people use.</span>
-    </h1>
-    <p class="sub">What happened in between is a story about learning fast, told in seven short chapters. <span class="mono">≈ 8 min read</span></p>
-    <div class="cta">
-      <a class="btn primary" href="#detour">Start the story <span aria-hidden="true">↓</span></a>
-      <a class="btn ghost" href="case-studies/">Read the case studies →</a>
-    </div>
-    <div class="live-row">
-      <span class="mono">Live right now</span>
-      <div id="liveChips"></div>
-    </div>
-   </div>
-   <div class="art" id="art" aria-hidden="true">
-     <div class="stage" id="stage">
-       <div class="glass g-main">
-         <div class="g-top"><i></i><i></i><i></i><span>Today · front desk</span></div>
-         <div class="g-kpi"><small>Calls answered by AI</small><b>9</b><em>6 booked</em></div>
-         <div class="g-bars"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:56%"></i><i style="--h:92%"></i><i style="--h:70%"></i></div>
-         <div class="g-row"><span>Arjun Mehta · 5:00 PM</span><b>Approve</b></div>
-       </div>
-       <div class="glass g-chip c1"><i class="ok">✓</i>Booked · Fri 5:30 PM</div>
-       <div class="glass g-chip c2"><small>EMI</small>₹9,603<small>/mo</small></div>
-       <div class="glass g-chip c3">Class 10 · CBSE · Maths <span>→</span></div>
-       <div class="glass g-chip c4"><i class="sav">AM</i>Aarav sent you a sticker</div>
-     </div>
-   </div>
-  </div>
-  <div class="scroll-cue" aria-hidden="true"><span></span></div>
-</section>
-
-<!-- ========== CH 1 · THE DETOUR ========== -->
-<section class="detour" data-ch="Chapter 01" data-name="The detour" id="detour">
-  <div class="sticky">
-    <div class="wrap">
-      <span class="eyebrow">Chapter 01 · The detour</span>
-      <p class="scrub" id="scrub">I went to NIT Kurukshetra to study electronics. Somewhere between the circuits and the exams, I noticed I cared more about what happens on the other side of a product: the person using it, the data it leaves behind, the decision someone makes with it. So I started teaching myself whatever it took to work on that side.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CH 2 · THE LEARNING CURVE ========== -->
-<section class="curve" data-ch="Chapter 02" data-name="The learning curve" id="curve">
-  <div class="pin">
-    <div class="wrap curve-head">
-      <span class="eyebrow">Chapter 02 · The learning curve</span>
-      <h2>Every year, <em>something new</em> to learn.<br><span class="dim">And something to show for it.</span></h2>
-    </div>
-    <div class="track-wrap">
-      <svg class="curve-line" id="curveSvg" aria-hidden="true"><path id="curvePath"/><path id="curveDraw"/></svg>
-      <ol class="track" id="track"></ol>
-    </div>
-    <div class="wrap curve-foot"><span class="mono" id="curveHint">Keep scrolling →</span></div>
-  </div>
-</section>
-
-<!-- ========== SCORE ========== -->
-<section class="score" aria-label="By the numbers">
-  <div class="wrap">
-    <div class="stats reveal">
-      <div><b data-count="4">4</b><span>products live on the web</span></div>
-      <div><b data-count="4">4</b><span>industries: edtech, fintech, healthtech, food delivery</span></div>
-      <div><b data-count="15" data-suffix="+">15+</b><span>projects on GitHub</span></div>
-      <div><b data-count="15000" data-suffix="+">15,000+</b><span>customer records analysed</span></div>
-      <div><b data-count="2" data-suffix="×">2×</b><span>Committee Head in one year</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CH 3 · THE PROOF ========== -->
-<section class="proof" data-ch="Chapter 03" data-name="The proof" id="proof">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Chapter 03 · The proof</span>
-      <h2>Four products. <em>Live</em> right now.</h2>
-      <p>Three built for real clients, and one concept I'd pitch to Swiggy. Hover a screen to scroll through it, click to open the real thing. Three come with a full case study: the problem, the users and every design decision.</p>
-      <a class="btn ghost sm cs-all" href="case-studies/">All case studies →</a>
-    </div>
-    <div id="shows"></div>
-  </div>
-</section>
-
-<!-- ========== CH 4 · THE WORKBENCH ========== -->
-<section class="bench" data-ch="Chapter 04" data-name="The workbench" id="workbench">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Chapter 04 · The workbench</span>
-      <h2>Not everything <em>is a website.</em></h2>
-      <p>Data, ML, product docs and hardware: the side projects that taught me the rest.</p>
-    </div>
-    <div class="filters reveal" id="benchFilters" role="group" aria-label="Filter projects"></div>
-    <div class="bgrid" id="benchGrid"></div>
-    <div class="toolkit reveal">
-      <span class="mono">Toolkit · click one to filter</span>
-      <div id="toolkit"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CH 5 · THE PERSON ========== -->
-<section class="person" data-ch="Chapter 05" data-name="The person" id="person">
-  <div class="wrap">
-    <div class="about">
-      <figure class="portrait reveal"><img src="assets/img/vivek.jpg" alt="Vivek Poddar" loading="lazy" width="640" height="640"><figcaption class="mono">Vivek Poddar · Kolkata</figcaption></figure>
-      <div class="reveal">
-        <span class="eyebrow">Chapter 05 · The person</span>
-        <h2>Engineer by degree. <em>Builder by habit.</em></h2>
-        <p class="lead">Every project here started in a domain I had to learn first: lending rules, clinic workflows, how parents choose a tutor. I don't wait to feel ready. I build, find out what I don't know, and close the gap.</p>
-        <ol class="how">
-          <li><span><b>Build to learn.</b> The first project in a new domain is the tutorial.</span></li>
-          <li><span><b>Study what works.</b> Take apart the best existing product, then do it clearer.</span></li>
-          <li><span><b>Ship, then sharpen.</b> A live v1 teaches more than a perfect draft.</span></li>
-        </ol>
+    <div class="hero-copy">
+      <p class="status"><i></i>Open to product design roles</p>
+      <p class="kicker">Vivek Poddar · Product & UI/UX designer</p>
+      <h1>I design products people use, <em>and ship them live.</em></h1>
+      <p class="sub">Engineer from NIT Kurukshetra who moved from circuits to product design. I take an idea from research and wireframes to a responsive, deployed product. Four are live right now, in fintech, healthtech, edtech and food delivery.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work ↓</a>
+        <a class="btn ghost" href="assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf">Download résumé</a>
       </div>
+      <dl class="facts">
+        <div><dt>Looking for</dt><dd>Product designer or UI/UX designer roles. Also open to product analyst roles.</dd></div>
+        <div><dt>Location</dt><dd>Kolkata. Open to Bengaluru, Pune, Gurugram or remote.</dd></div>
+        <div><dt>Education</dt><dd>B.Tech, Electronics & Communication, NIT Kurukshetra, 2026</dd></div>
+      </dl>
     </div>
-
-    <div class="sub-block reveal">
-      <h3 class="subhead">Along the way</h3>
-      <div class="xp" id="xp"></div>
-    </div>
-
-    <div class="sub-block cols reveal">
-      <div>
-        <h3 class="subhead">Education</h3>
-        <div id="edu"></div>
-      </div>
-      <div>
-        <h3 class="subhead">Certificates <span class="mono">tap to view</span></h3>
-        <div class="certs" id="certs"></div>
-      </div>
-    </div>
-
-    <div class="sub-block reveal">
-      <h3 class="subhead">Off the clock</h3>
-      <div class="beyond" id="beyond"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CH 6 · FACE AN OVER ========== -->
-<section class="ask" data-ch="Chapter 06" data-name="Face an over" id="ask">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Chapter 06 · Face an over</span>
-      <h2>Bowl me <em>a question.</em></h2>
-      <p>I played cricket long before I designed anything, so interviews work best as an over: six deliveries, six straight answers. Or bowl your own.</p>
-    </div>
-    <div class="nets reveal">
-      <div class="pitch" aria-hidden="true">
-        <svg class="pitch-art" viewBox="0 0 200 520" preserveAspectRatio="none">
-          <rect x="40" y="0" width="120" height="520" rx="6" class="strip"/>
-          <line x1="40" y1="70" x2="160" y2="70" class="crease"/><line x1="40" y1="450" x2="160" y2="450" class="crease"/>
-          <line x1="58" y1="40" x2="58" y2="100" class="crease thin"/><line x1="142" y1="40" x2="142" y2="100" class="crease thin"/>
-          <line x1="58" y1="420" x2="58" y2="480" class="crease thin"/><line x1="142" y1="420" x2="142" y2="480" class="crease thin"/>
-          <g class="stumps"><rect x="92" y="54" width="3" height="16"/><rect x="98.5" y="54" width="3" height="16"/><rect x="105" y="54" width="3" height="16"/></g>
-          <g class="stumps"><rect x="92" y="450" width="3" height="16"/><rect x="98.5" y="450" width="3" height="16"/><rect x="105" y="450" width="3" height="16"/></g>
-        </svg>
-        <span class="delivery" id="delivery"></span>
-      </div>
-      <div class="booth">
-        <div class="scoreboard">
-          <div><small>Batting</small><b>Vivek <span id="runs">0</span>*</b></div>
-          <div><small>This over</small><div class="balls" id="balls"></div></div>
-          <div><small>Over</small><b id="overNo">1</b></div>
+    <div class="art" aria-hidden="true">
+      <div class="stage">
+        <div class="card g-main">
+          <div class="g-top"><i></i><i></i><i></i><span>ClinicAI · Today</span></div>
+          <div class="g-kpi"><small>Calls answered by AI</small><b>9</b><em>6 booked</em></div>
+          <div class="g-bars"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:56%"></i><i style="--h:92%"></i><i style="--h:70%"></i></div>
+          <div class="g-row"><span>Arjun Mehta · 5:00 PM</span><b>Approve</b></div>
         </div>
-        <div class="deliveries" id="deliveries" role="group" aria-label="Pick a question"></div>
-        <article class="commentary" id="commentary" aria-live="polite">
-          <span class="mono" id="cmTag">Waiting for the first ball</span>
-          <h3 id="cmQ">Pick a delivery above to start the over.</h3>
-          <p id="cmA">Every answer here is written by me. No scripts, no filler.</p>
-        </article>
-        <form class="bowl" id="askForm">
-          <label class="sr" for="askInput">Bowl your own question</label>
-          <input id="askInput" type="text" autocomplete="off" placeholder="Bowl your own, e.g. “how do you learn?”">
-          <button class="btn primary sm" type="submit">Bowl</button>
-        </form>
+        <div class="card g-chip c1"><i class="ok">✓</i>Booked · Fri 5:30 PM</div>
+        <div class="card g-chip c2"><small>EMI</small>₹9,603<small>/mo</small></div>
+        <div class="card g-chip c3">Class 10 · CBSE · Maths <span>→</span></div>
+        <div class="card g-chip c4"><i class="sav">AM</i>Aarav sent you a sticker</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== EPILOGUE · YOUR CHAPTER ========== -->
-<section class="next" data-ch="Chapter 07" data-name="Yours" id="next">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="wrap next-grid">
-    <div class="reveal">
-      <span class="eyebrow">Chapter 07 · Yours</span>
-      <h2 class="big">The next chapter <em>needs a team.</em></h2>
-      <p class="lead">Tap a couple of options and I'll draft the email for you.</p>
-      <a class="mail" href="mailto:vivekpoddar.work@gmail.com">vivekpoddar.work@gmail.com</a>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/vivekpoddar-work" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://github.com/PoddarVivek" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="case-studies/">Case studies →</a>
-        <a href="assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf" data-resume>Résumé ↓</a>
-      </div>
+<!-- ========== SELECTED WORK ========== -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Selected work</span>
+      <h2>Four products, <em>live</em> on the web.</h2>
+      <p>Two for real clients, one product of my own and one concept for Swiggy. Each has a case study with the problem, the users and the design decisions. Hover a screen to scroll through the real page.</p>
     </div>
-    <form class="brief-form reveal" id="briefForm" novalidate>
-      <div class="field"><span class="lbl">What's it about?</span>
-        <div class="choices">
-          <label class="choice"><input type="radio" name="about" value="a full-time role"><span>Full-time role</span></label>
-          <label class="choice"><input type="radio" name="about" value="an internship"><span>Internship</span></label>
-          <label class="choice"><input type="radio" name="about" value="a freelance project"><span>Freelance project</span></label>
-          <label class="choice"><input type="radio" name="about" value="something else"><span>Just saying hi</span></label>
-        </div>
-      </div>
-      <div class="row2">
-        <div><label for="bName">Your name</label><input type="text" id="bName" autocomplete="name"></div>
-        <div><label for="bCompany">Company</label><input type="text" id="bCompany" autocomplete="organization"></div>
-      </div>
-      <div class="preview" id="bPreview" aria-live="polite"></div>
-      <div class="fbtns">
-        <button class="btn primary" type="submit">Send via email ↗</button>
-        <button class="btn ghost" type="button" id="bCopy">Copy</button>
-      </div>
-    </form>
+    <div id="projects"></div>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCE ========== -->
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Experience</span>
+      <h2>Where I've <em>worked.</em></h2>
+    </div>
+    <div class="xp" id="xp"></div>
+    <p class="leadership"><b>Leadership</b><span id="leadership"></span></p>
+  </div>
+</section>
+
+<!-- ========== MORE WORK ========== -->
+<section class="more" id="more">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">More work</span>
+      <h2>Product and data <em>projects.</em></h2>
+      <p>Teardowns, PRDs and analysis that back up the design work.</p>
+    </div>
+    <div class="mlist" id="moreList"></div>
+  </div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+<section class="skills" id="skills">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Skills</span>
+      <h2>What I <em>work with.</em></h2>
+    </div>
+    <div class="sgrid" id="skillGrid"></div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="portrait"><img src="assets/img/vivek.jpg" alt="Vivek Poddar" loading="lazy" width="640" height="640"></figure>
+    <div>
+      <span class="eyebrow">About</span>
+      <h2>Engineer by degree. <em>Designer by choice.</em></h2>
+      <p class="lead">I studied electronics at NIT Kurukshetra, then realised I cared more about the person using a product than the circuit inside it. So I taught myself UX, front-end and data, and I learn each new domain by building in it: lending rules for Maitry Finance, clinic workflows for ClinicAI, how parents choose a tutor for Rinkal Coaching.</p>
+      <ol class="how">
+        <li><b>Build to learn.</b> The first project in a new domain is the tutorial.</li>
+        <li><b>Study what works.</b> Take apart the best existing product, then do it clearer.</li>
+        <li><b>Ship, then sharpen.</b> A live v1 teaches more than a perfect draft.</li>
+      </ol>
+      <dl class="side">
+        <div><dt>Education</dt><dd>B.Tech, Electronics & Communication, NIT Kurukshetra, 2022 – 2026</dd></div>
+        <div><dt>Certifications</dt><dd>GenAI Powered Data Analytics (Tata × Forage, 2026) · The Complete SQL Bootcamp (Udemy, 2025)</dd></div>
+        <div><dt>Outside work</dt><dd>District-level cricketer (CAB), Man of the Match · MUN and debating</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2 class="big">Hiring for a product or UI/UX role? <em>Let's talk.</em></h2>
+    <p class="lead">Email is the quickest way to reach me. My résumé has the full details.</p>
+    <div class="mailrow">
+      <a class="mail" id="mail" href="mailto:vivekpoddar.work@gmail.com">vivekpoddar.work@gmail.com</a>
+      <button class="btn ghost sm" type="button" id="copyMail">Copy email</button>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/vivekpoddar-work" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/PoddarVivek" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="case-studies/">Case studies →</a>
+      <a href="assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf">Résumé ↓</a>
+    </div>
   </div>
 </section>
 </main>
@@ -293,23 +184,13 @@
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Vivek Poddar · designed and built by hand.</span>
-    <span class="mono">Press <kbd>R</kbd> for résumé · <kbd>W</kbd> for work · <kbd>C</kbd> for case studies</span>
+    <span class="mono">Kolkata, India</span>
   </div>
 </footer>
 
-<div class="cursor-tag" id="cursorTag" aria-hidden="true">Open live ↗</div>
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-  <div class="mcard">
-    <div class="mhead"><div><b id="mTitle"></b><small id="mSub"></small></div><button class="mclose" id="mClose" aria-label="Close">✕</button></div>
-    <div class="mbody"><img id="mImg" alt=""></div>
-    <div class="mnav"><button type="button" id="mPrev">← Prev</button><span id="mPos"></span><button type="button" id="mNext">Next →</button></div>
-  </div>
-</div>
 <div class="toast" id="toast" role="status"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
-<script src="assets/data.js?v=20261012b"></script>
-<script src="assets/site.js?v=20261012b"></script>
-<script src="assets/motion.js?v=20261012b"></script>
+<script src="assets/data.js?v=20261012d"></script>
+<script src="assets/site.js?v=20261012d"></script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClinicAI · case study · Vivek Poddar</title><meta name="description" content="Designing an AI receptionist for independent clinics in India: the doctor stays in control, the phone always gets answered.">
+<script>try{var t=localStorage.getItem('theme');if(!t&&matchMedia('(prefers-color-scheme: light)').matches)t='whites';if(t==='whites')document.documentElement.dataset.theme='whites'}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAFAF7;--ink:#1E2A44;--muted:#5B6478;--hl:#FFE066;--note:#B83A1E;--rule:#DADDE4;--card:#FFFFFF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.7 "Source Serif 4",Georgia,serif}
+a{color:var(--ink);text-decoration-color:var(--note);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--note);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 24px 80px}
+.top{display:flex;justify-content:space-between;gap:16px;font:600 15px/1.4 "Bricolage Grotesque",system-ui,sans-serif;margin-bottom:56px}
+.top a{text-decoration:none}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:clamp(40px,7vw,76px);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.lede{font-size:clamp(20px,2.4vw,24px);color:var(--muted);max-width:40ch;margin:20px 0 32px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;border-top:2px solid var(--ink);padding-top:16px;margin-bottom:48px;font-size:16px}
+.facts dt{font:700 14px/1.3 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.facts dd{margin:4px 0 0}
+.shot{background:var(--card);border:1.5px solid var(--ink);border-radius:10px;overflow:hidden;box-shadow:8px 8px 0 var(--ink);margin:0 0 72px}
+.bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1.5px solid var(--ink);font:14px/1 "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.bar i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);display:inline-block}
+.bar span{margin-left:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;background:#eef0f4}
+section{margin-bottom:64px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:750;margin-bottom:18px}
+.prose{max-width:66ch}
+.prose p{margin:0 0 1em}
+.dec{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:40px;padding:28px 0;border-top:1px solid var(--rule)}
+.dec h3{font-size:23px;font-weight:700;margin-bottom:10px}
+.dec p{margin:0}
+.why{font:600 24px/1.25 "Caveat",cursive;color:var(--note);transform:rotate(-2deg);align-self:center;padding-left:18px;border-left:3px solid var(--note)}
+.why mark{background:linear-gradient(transparent 55%,var(--hl) 55%);color:inherit}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px}
+.ba div{border:1.5px solid var(--ink);border-radius:10px;padding:18px 20px;background:var(--card)}
+.ba h3{font-size:18px;margin-bottom:8px}
+.ba ul{margin:0;padding-left:18px;font-size:16.5px}
+.cta{display:inline-block;margin-top:8px;padding:12px 20px;border:2px solid var(--ink);border-radius:999px;background:var(--hl);font:700 16px/1 "Bricolage Grotesque",sans-serif;text-decoration:none}
+.cta:hover{background:var(--ink);color:var(--paper)}
+footer{border-top:2px solid var(--ink);padding-top:20px;font-size:15px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.list{display:grid;gap:28px}
+.item{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center;text-decoration:none;border:1.5px solid var(--ink);border-radius:12px;background:var(--card);padding:20px;box-shadow:6px 6px 0 var(--ink)}
+.item:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.item img{width:100%;border-radius:8px;border:1px solid var(--rule);aspect-ratio:1200/630;object-fit:cover;background:#eef0f4}
+.item h2{font-size:30px;margin-bottom:8px}
+.item p{margin:0;color:var(--muted);font-size:17px}
+@media (max-width:760px){
+ body{font-size:17px}
+ .dec{grid-template-columns:1fr;gap:14px}
+ .why{transform:none}
+ .ba{grid-template-columns:1fr}
+ .item{grid-template-columns:1fr}
+ .shot{box-shadow:5px 5px 0 var(--ink)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>
+.who div{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);column-gap:32px;padding:22px 0;border-top:1px solid var(--rule)}
+.who div:last-child{border-bottom:1px solid var(--rule)}
+.who h3{font-size:20px;grid-column:1}
+.who small{grid-column:1;grid-row:2;font-size:14px;color:var(--muted)}
+.who p{margin:0;font-size:16px;grid-row:1/3}
+.who p:nth-of-type(1){grid-column:2}.who p:nth-of-type(2){grid-column:3}
+.metrics{margin:0;padding-left:20px}
+.metrics li{margin-bottom:6px}
+@media (max-width:760px){.who div{grid-template-columns:1fr;row-gap:6px}.who h3,.who small,.who p:nth-of-type(n){grid-column:1;grid-row:auto}}
+</style>
+<link rel="stylesheet" href="../assets/case-study.css?v=20261012b"></head><body><div class="wrap">
+<nav class="top" aria-label="Site"><a class="brand" href="../"><span class="dot"></span>Vivek Poddar</a><span class="links"><a class="hide-sm" href="../">← Portfolio</a><a href="./">Case studies</a><a class="hide-sm" href="../assets/Vivek_Poddar_Resume.pdf" download="Vivek_Poddar_Resume.pdf">Résumé ↓</a><button class="mode hide-sm" id="modeBtn" type="button" aria-label="Switch theme">Floodlights</button><a class="pill" href="../#contact">Let's talk</a></span></nav>
+<header><span class="tag">Personal SaaS product · healthtech</span><h1>Answering every call a clinic misses</h1><p class="lede">Independent clinics in India lose patients when the phone rings during a consultation. ClinicAI is an AI receptionist that answers in English, Hindi and Bengali, books into the clinic's real schedule and passes the doctor only the calls that need a decision.</p><dl class="facts"><div><dt>Role</dt><dd>Solo: product, design and build</dd></div><div><dt>Type</dt><dd>Personal project, in early access</dd></div><div><dt>Built with</dt><dd>Next.js, Supabase</dd></div><div><dt>Scope</dt><dd>Landing page, onboarding, clinic workspace, patient portal</dd></div></dl></header>
+<figure class="shot"><div class="bar"><i></i><i></i><i></i><span>clinic-ai-pi.vercel.app</span></div><img src="../assets/img/live-clinic.jpg" alt="ClinicAI landing page" loading="lazy" style="object-position:top"></figure>
+
+<section><h2>The problem</h2><div class="prose"><p>A doctor running a small clinic is usually the busiest person in it. When they're with a patient, the phone rings out, and the patient on the other end simply calls the next clinic. Front-desk staff, where there are any, spend the day firefighting bookings instead of looking after the people in the waiting room.</p><p>Patients want something simple: a time confirmed in one call, in their own language, and a way to change it later without calling again.</p><p>The hard part isn't answering the phone. It's letting software take bookings without the doctor feeling they've lost control of their own schedule.</p></div></section>
+
+<section><h2>Who it's for</h2><div class="who">
+<div><h3>The doctor</h3><small>Owns the clinic and buys the product</small><p>Wants the phone answered and bookings made while they're with a patient.</p><p><b>Worries about:</b> losing control of the schedule, or the AI saying something wrong.</p></div>
+<div><h3>Front-desk staff</h3><small>Use it every day</small><p>Want to see who's coming and what needs a decision when the day starts.</p><p><b>Worries about:</b> another piece of software to learn.</p></div>
+<div><h3>The patient</h3><small>Calls the clinic</small><p>Wants a confirmed time in one call, in their language, and to change it later without calling.</p><p><b>Worries about:</b> being put on hold, or forgetting the time.</p></div>
+</div></section>
+
+<section><h2>Design decisions</h2>
+<div class="dec"><div><h3>The doctor stays in control</h3><p>The AI only books inside the clinic's own rules: its sessions, slot lengths and days off. Anything outside them becomes a request the doctor approves or declines with one tap.</p></div><p class="why">The biggest fear was <mark>losing the schedule</mark>, so the AI never gets the final say on exceptions.</p></div>
+<div class="dec"><div><h3>Show what was done before showing settings</h3><p>The Today view opens with outcomes, like “the AI answered 9 calls and booked 6”, and only then offers controls. Deciding the day's requests takes about two minutes.</p></div><p class="why">Value first, <mark>controls second</mark>.</p></div>
+<div class="dec"><div><h3>Activation is a real booking</h3><p>Onboarding has five steps: clinic, hours, how the AI talks, a test call, then the phone line. The test call books a slot into the clinic's own schedule, with a target of under 10 minutes from sign-up.</p></div><p class="why">Trust comes from seeing it work <mark>on your own calendar</mark>.</p></div>
+<div class="dec"><div><h3>One next action per screen</h3><p>Every page has a single primary button, so staff always know what to do next without training.</p></div><p class="why">Staff didn't want <mark>another tool to learn</mark>.</p></div>
+<div class="dec"><div><h3>Use the clinic's words</h3><p>The product says slot, day off and front desk, never configuration or entities. Sample data and estimates are labelled as such.</p></div><p class="why">If it sounds like their clinic, it <mark>feels like theirs</mark>.</p></div>
+<div class="dec"><div><h3>Patients change bookings without calling</h3><p>After the AI books, a patient can sign in at a patient portal with a phone code to see, move or cancel the appointment.</p></div><p class="why">Every change made online is <mark>one less call</mark> for the clinic.</p></div>
+</section>
+
+<section><h2>How I'd measure it</h2><div class="prose"><p><b>North Star:</b> appointments booked by the AI per clinic per week. It counts both time given back to the clinic and patients kept.</p><p><b>Activation:</b> a new clinic sees a test call book a slot into its own schedule.</p><p>Supporting metrics, each tracked as a product event:</p><ul class="metrics"><li>Sign-up → setup finished → phone line connected</li><li>Days per week the workspace is opened</li><li>Time taken to decide a request</li><li>AI call completion rate: calls that end booked or with an alternative offered</li><li>Changes patients make in the portal instead of calling</li></ul><p>ClinicAI is in early access, so there are no customer numbers yet. These are the numbers I'd watch first.</p></div></section>
+
+<section><h2>What's next</h2><div class="prose"><p>SMS or WhatsApp confirmations with a link to the patient portal, one-tap approve notifications for the doctor, staff invites with owner and staff roles, and a weekly summary email built from the same data as the Today view. Pricing still needs to be set before early access ends.</p></div><a class="cta" href="https://clinic-ai-pi.vercel.app/">Open ClinicAI</a></section>
+<footer><span>Vivek Poddar · product &amp; UX design</span>
+<span><a href="https://www.linkedin.com/in/vivekpoddar-work">LinkedIn</a> &nbsp; <a href="https://github.com/PoddarVivek">GitHub</a> &nbsp; <a href="mailto:vivekpoddar.work@gmail.com">Email</a></span></footer>
+</div><script src="../assets/case-study.js?v=20261012b"></script>
+</body></html>

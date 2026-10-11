@@ -1,61 +1,60 @@
-# Vivek Poddar — Portfolio
+# Vivek Poddar · Portfolio
 
 Live: https://poddar-vivek-github-io.vercel.app/
 
-A portfolio told as a story in chapters: an electronics engineer who taught himself data, ML, product
-thinking and UI/UX — and shipped live products in edtech, fintech and healthtech.
+A job-focused portfolio for product and UI/UX design roles. It is laid out the way a recruiter scans a page:
+who he is and what he's looking for first, then the work, then the experience behind it.
 
 Plain HTML, CSS and vanilla JS. No build step, no npm.
 
-## The story
+## Page order
 
-| Chapter | What happens | Technique |
-| --- | --- | --- |
-| Prologue — *The hook* | "In 2022, I was wiring ~~circuits~~. Now I design *products* people use." | Before/after contrast, reading-time promise, "skip to the work" for busy readers |
-| 01 — *The detour* | Why he left pure electronics | Paragraph that lights up word by word as you scroll |
-| 02 — *The learning curve* | One new skill per year, each with its proof | Pinned sideways scroll; cards climb and a lime curve draws itself |
-| Score | 3 live products, 3 industries, 15+ projects… | Count-up numbers |
-| 03 — *The proof* | Spotted (a Swiggy feature concept), Maitry Finance, ClinicAI, a coaching institute website | Live previews: hover to scroll through the real page, click to open it |
-| 04 — *The workbench* | Data, ML, product docs, hardware | Filters + clickable toolkit |
-| 05 — *The person* | About, how he learns, experience, education, certificates | Proof thumbnails open in a viewer |
-| 06 — *Face an over* | Interview questions as six deliveries per over | A ball runs down the pitch, the answer arrives as commentary, the scoreboard ticks up; visitors can bowl their own question |
-| 07 — *Yours* | Contact | Brief builder that drafts an email |
+| Section | What's in it |
+| --- | --- |
+| Hero | Role, one-line pitch, résumé download, and quick facts: roles wanted, location, education |
+| Selected work | Spotted, Maitry Finance, ClinicAI, Rinkal Coaching. Each has a live preview (hover to scroll the real page), the problem, his role, what he did, and links to the case study and live site |
+| Experience | Butter Search, freelance design, Grrowup, plus a one-line leadership summary |
+| More work | Product teardowns, PRDs and data projects, each with a repo or live link |
+| Skills | Design, research & product, build, data (kept in step with the résumé) |
+| About | Short story, how he works, education, certifications, outside work |
+| Contact | Email with a copy button, LinkedIn, GitHub, résumé |
 
-A fixed header shows the current chapter, a reading-progress bar and the theme switch.
+The sticky header links to each section, highlights the one you're reading and shows a reading-progress bar.
 
-**Two themes:** *Floodlights* (default dark: ink, lime, lilac) and *Test whites* (cream flannel, cricket-ball red,
-pitch green). The switch wipes the new theme in as a circle from the button (View Transitions API), remembers the
-choice, and follows the OS light/dark setting on a first visit.
+**Two themes:** *Floodlights* (default dark: ink and lime) and *Test whites* (cream and cricket-ball red).
+The switch wipes the new theme in as a circle from the button (View Transitions API), remembers the choice,
+follows the OS light/dark setting on a first visit, and carries over to the case studies.
 
 ## Files
 
 ```
-index.html            page markup
-assets/data.js        ← EDIT ZONE: all content
-assets/site.js        rendering + interactions
-assets/site.css       design system (dark · Instrument Serif · Geist · lime)
-assets/motion.css     motion layer: hero art, aurora, word reveals, 3D screen tilt
-assets/motion.js      smooth scroll (Lenis via CDN), glass product card, theme switch
-assets/over.css       Chapter 06 pitch + scoreboard, theme toggle, Test whites tuning
-assets/case-study.css case studies: portfolio header, fonts and both themes over each page's own styles
-assets/case-study.js  case-study theme switch (shares the saved theme with the main page)
-assets/img/           photos, certificates and live-site screenshots (live-*.jpg)
+index.html               page markup
+assets/data.js           ← EDIT ZONE: all content
+assets/site.js           rendering + interactions
+assets/site.css          styles for the main page
+assets/case-study.css    case studies: portfolio header, fonts and both themes over each page's own styles
+assets/case-study.js     case-study theme switch (shares the saved theme with the main page)
+assets/img/              photos and live-site screenshots (live-*.jpg)
 assets/Vivek_Poddar_Resume.pdf
-og-image.png          social share card (source: src/og.html)
+case-studies/            Spotted, Maitry Finance, ClinicAI, Rinkal Coaching + index
+spotted/                 the Spotted interactive prototype
+og-image.png             social share card (source: src/og.html)
 ```
 
 ## Editing content
 
-Everything renders from `assets/data.js`:
+Everything on the main page renders from `assets/data.js`:
 
-- `CURVE` — the learning-curve steps (oldest → newest)
-- `LIVE` — live products; `img` is a screenshot in `assets/img/`, `tall: true` makes it scroll on hover, `label` replaces the domain shown on the card
-- `BUILDS`, `TOOLKIT` — workbench projects and the clickable toolkit
-- `EXPERIENCE`, `EDUCATION`, `CERTS`, `BEYOND` — `proofs` point at images in `assets/img/`
-- `QNA` — interview answers; every six make one over; `k` is the list of keywords used to match typed questions
+- `WORK`: selected projects. `img` is a screenshot in `assets/img/`, `tall: true` scrolls it on hover,
+  `label` replaces the domain shown on the card, `cs` links the case study
+- `EXPERIENCE`, `LEADERSHIP`: experience rows and the leadership line
+- `MORE`: smaller product and data projects; only add ones with a working link
+- `SKILLS`: grouped skills; keep them matching the résumé
 
 To refresh a live-site screenshot, capture the site at 1280px wide (tall captures for scrolling previews) and
 overwrite the matching `assets/img/live-*.jpg`.
+
+After changing a CSS or JS file, bump the `?v=` number on its link in `index.html` so returning visitors get the new file.
 
 ## Running locally
 
@@ -65,4 +64,4 @@ python -m http.server 8000
 
 ## Deploying
 
-The repo is connected to Vercel — pushing to `main` redeploys automatically.
+The repo is connected to Vercel. Pushing to `main` redeploys automatically.
